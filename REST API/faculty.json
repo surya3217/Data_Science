@@ -1,0 +1,42 @@
+{
+	"Faculty1": {
+		"Name": {
+			"First Name": "Meenakshi",
+			"Middle Name": null,
+			"Last Name": "Tripathi"
+		},
+		"Gender": "Female",
+		"Designation": "Associate Professor",
+		"Photo": "http://www.mnit.ac.in/PortalProfile/images/faculty/mnitjas137.png",
+		"Department": "Computer Science and Engineering",
+		"Qualifications": ["Ph.D. MNIT", "M.Tech. from Banasthali", "B.E. from Jaipur"],
+		"Research Areas": ["Secure Routing In Wireless Sensor Networks", "Wireless Sensor Networks",
+			"Wireless Ad hoc Networks", "Opportunistic Networks", "Network Security",
+			"Software Defined Networks"
+		],
+		"Contact Details": {
+			"Phone No.": [1412529154, 1412713419],
+			"Email Id": "mtripathi.cse@mnit.ac.in"
+		}
+	},
+
+	"Faculty2": {
+		"Name": {
+			"First Name": "Pilli",
+			"Middle Name": "Emmanuel",
+			"Last Name": "Shubhakar"
+		},
+		"Gender": "Male",
+		"Designation": "Head of Department",
+		"Photo": "http://www.mnit.ac.in/PortalProfile/images/faculty/mnitjas200.jpg",
+		"Department": "Computer Science and Engineering",
+		"Qualifications": ["Ph.D. from IIT Roorkee", "M.Tech. from BIT Ranchi", " B.Tech. from Nagarjuna University"],
+		"Research Areas": ["Security", "Privacy and Forensics", "Computer Networks",
+			"Cloud Computing", "Big Data", "Internet of Things"
+		],
+		"Contact Details": {
+			"Phone No.": 1412713376,
+			"Email Id": "espilli.cse@mnit.ac.in"
+		}
+	}
+}
