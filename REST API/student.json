@@ -1,0 +1,23 @@
+{
+	"student": {
+		"Name": {
+			"First Name": "Suraj",
+			"Middle Name": "Kumar",
+			"Last Name": "Saini"
+		},
+		"Gender": "Male",
+		"Designation": "Software developer",
+		"Photo": "http://www.mnit.ac.in/PortalProfile/images/faculty/mnitjas137.png",
+		"Branch": "Electronics and Communication Engineering",
+		"Qualifications": ["B.Tech. from Jaipur", "12th from Haldwani", "10th from Haldwani"],
+		"Technical Knowledge": ["Machine Learning", "Data Processing", "Python", "Json"],
+
+		"Contact Details": {
+			"Phone No.": [8077114036, 7241356120],
+			"Email Id": {
+				"college": "2015kuec2015@iiit.ac.in",
+				"home": "surajkumar9427@gmail.com"
+			}
+		}
+	}
+}
