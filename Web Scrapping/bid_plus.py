@@ -1,4 +1,3 @@
-
 """
 Code Challenge:
   Name: 
@@ -16,7 +15,6 @@ Code Challenge:
           4. Department Name And Address
           5. Start Date/Time(Enter date and time in different columns)
           6. End Date/Time(Enter date and time in different columns)
-          
           # Optional - Do not do this
           7. Name of the PDF file
           
@@ -25,7 +23,7 @@ Code Challenge:
 """
 
 
-from  selenium import webdriver
+from selenium import webdriver
 from time import sleep
 from bs4 import BeautifulSoup as BS
 
@@ -42,8 +40,9 @@ D=[]   ## quantity
 E=[]   ## start date
 F=[]   ## end date
 
-i=0
-while(i<5):
+i= 1
+## collecting data for 10 pages
+while(i<= 10):
     
     page = browser.find_element_by_id("pagi_content")  
     for row in page.find_elements_by_class_name("border"):
@@ -59,8 +58,10 @@ while(i<5):
         E.append(item[2].text.strip())
         F.append(item[3].text.strip())
         
-    next_page= browser.find_element_by_xpath('/html/body/section[2]/div/div/div/div[3]/ul/li/ul/li[5]/a').click()
-    sleep(1)
+    browser.find_element_by_xpath("//a[@rel='next']").click()
+## xpath is changing for every page but "//a[@rel='next']" is fixed for pages as it find rel= 'next'
+#    in every page then click the button
+#    sleep(0.5)
     i=i+1
 
 browser.quit()
@@ -73,7 +74,6 @@ col_data = OrderedDict(zip(col_name,[A,C,D,B,E,F]))
 
 df = pd.DataFrame(col_data) 
 df.to_csv("bidplus.csv")
-
 
 
 ###################################################################################
