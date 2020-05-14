@@ -64,6 +64,66 @@ add_employee(12,'Devendra', 'Shekhawat', 30000)
 
 fetch_all_employee()
 
+################################################################################
+
+'''
+Insert DataFrame to Mongodb Cloud using 'to_dict' Function
+'''
+
+import pymongo
+import pandas as pd
+
+cluster = pymongo.MongoClient("mongodb+srv://surajkumar9427:surya123@cluster0-xk6lv.mongodb.net/test?retryWrites=true&w=majority")
+#client = pymongo.MongoClient("mongodb+srv://sylvesterferns:cooler%21%40%23123@cluster0-t6mku.mongodb.net/test?retryWrites=true&w=majority")
+client= cluster['icc_db']
+collection= client['odi']   ## creates new collection if doesn't exist
+
+"reading data file"
+df = pd.read_csv("Saved csv/icc_odi.csv") #csv file which you want to import
+df= df.iloc[:,1:]
+print(df)
+
+"Inserting data to the mongodb collection"
+records_ = df.to_dict(orient = 'records')
+result = collection.insert_many(records_ )
+
+"reading the data from the collection"
+def fetch_all_employee():
+    user = collection.find()    ## finding all data from the collection
+    for i in user:
+        print (i)
+
+"calling the function"
+fetch_all_employee()
+
+###############################################################################
+
+import pymongo
+import pandas as pd
+
+cluster = pymongo.MongoClient("mongodb+srv://surajkumar9427:surya123@cluster0-xk6lv.mongodb.net/test?retryWrites=true&w=majority")
+client= cluster['icc_db']
+collection= client['t20']   ## creates new collection if doesn't exist
+
+"reading data file"
+df = pd.read_csv("Saved csv/icc_t20.csv") #csv file which you want to import
+df= df.iloc[:,1:]
+print(df)
+
+"Inserting data to the mongodb collection"
+records_ = df.to_dict(orient = 'records')
+result = collection.insert_many(records_ )
+
+"reading the data from the collection"
+def fetch_all_employee():
+    user = collection.find()    ## finding all data from the collection
+    for i in user:
+        print (i)
+
+"calling the function"
+fetch_all_employee()
+
+
 
 
 
