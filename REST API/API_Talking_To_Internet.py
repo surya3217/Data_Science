@@ -107,9 +107,13 @@ Format of the HTTP Response
 
     100 means Informational Messages 
     200 means all OK ( success messages ) 
-    301 means  ( Resouce requested is moved to different location from the server )
+    204 means No Content. The server successfully processed the request and did not return any content.
+    301 means ( Resouce requested is moved to different location from the server )
+    400 means Bad Request. The server cannot process the request because the client-side errors (incorrect request format).
+    401 means Unauthorized. Occurs when authentication was failed, due to incorrect credentials or even their absence.
     404 means not found ( Something went wrong in client request ) 
     500 means Server Errors ( Something went working on server side while processing the request ) 
+    
 
 2	Headers		
     [Header Name]: [Header Value]	
